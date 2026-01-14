@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fastigheter - Testföretag</title>
+  <meta name="description" content="Utforska Testföretags fastighetsbestånd i Malmöregionen. Moderna kontors- och verksamhetslokaler i attraktiva lägen.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Testföretag</a>
+      
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Hem</a>
+        <a href="om-oss.html" class="nav-link">Om oss</a>
+        <a href="fastigheter.html" class="nav-link active">Fastigheter</a>
+        <a href="projektutveckling.html" class="nav-link">Projektutveckling</a>
+        <a href="lediga-lokaler.html" class="nav-link">Lediga lokaler</a>
+      </nav>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Öppna meny">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header">
+        <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Stäng meny">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link">Hem</a>
+        <a href="om-oss.html" class="mobile-nav-link">Om oss</a>
+        <a href="fastigheter.html" class="mobile-nav-link active">Fastigheter</a>
+        <a href="projektutveckling.html" class="mobile-nav-link">Projektutveckling</a>
+        <a href="lediga-lokaler.html" class="mobile-nav-link">Lediga lokaler</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="images/property-hero.jpg" alt="Testföretags fastighetsbestånd">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Fastigheter</h1>
+        <p>Vårt fastighetsbestånd omfattar över 50 000 kvm i Malmöregionen.</p>
+      </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="filter-bar">
+          <input type="text" placeholder="Sök fastighet..." id="searchInput" onkeyup="filterProperties()">
+          <select id="areaFilter" onchange="filterProperties()">
+            <option value="">Alla områden</option>
+            <option value="centrum">Malmö Centrum</option>
+            <option value="vastra-hamnen">Västra Hamnen</option>
+            <option value="limhamn">Limhamn</option>
+            <option value="hyllie">Hyllie</option>
+          </select>
+          <select id="typeFilter" onchange="filterProperties()">
+            <option value="">Alla typer</option>
+            <option value="kontor">Kontor</option>
+            <option value="verksamhet">Verksamhet</option>
+          </select>
+        </div>
+        
+        <div class="filter-chips">
+          <button class="filter-chip active" onclick="setAreaFilter('')">Alla</button>
+          <button class="filter-chip" onclick="setAreaFilter('centrum')">Malmö Centrum</button>
+          <button class="filter-chip" onclick="setAreaFilter('vastra-hamnen')">Västra Hamnen</button>
+          <button class="filter-chip" onclick="setAreaFilter('limhamn')">Limhamn</button>
+          <button class="filter-chip" onclick="setAreaFilter('hyllie')">Hyllie</button>
+        </div>
+
+        <!-- Properties Grid -->
+        <div class="grid-3" id="propertiesGrid">
+          <article class="card" data-area="centrum" data-type="kontor">
+            <div class="card-image">
+              <img src="images/property-1.jpg" alt="Centrumhuset - Kontorsfastighet i Malmö">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Centrumhuset</h3>
+              <div class="card-meta">
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Malmö Centrum
+                </span>
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  8 500 kvm
+                </span>
+              </div>
+              <p class="card-description">Modern kontorsfastighet i hjärtat av Malmö med utmärkta kommunikationer och service i gatuplan.</p>
+              <button class="btn btn-primary" style="width:100%" onclick="openPropertyModal('centrumhuset')">Läs mer</button>
+            </div>
+          </article>
+          
+          <article class="card" data-area="vastra-hamnen" data-type="kontor">
+            <div class="card-image">
+              <img src="images/property-2.jpg" alt="Hamnkontoret - Västra Hamnen">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Hamnkontoret</h3>
+              <div class="card-meta">
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Västra Hamnen
+                </span>
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  12 000 kvm
+                </span>
+              </div>
+              <p class="card-description">Exklusiva kontorslokaler med havsutsikt i Västra Hamnens mest attraktiva läge.</p>
+              <button class="btn btn-primary" style="width:100%" onclick="openPropertyModal('hamnkontoret')">Läs mer</button>
+            </div>
+          </article>
+          
+          <article class="card" data-area="limhamn" data-type="verksamhet">
+            <div class="card-image">
+              <img src="images/property-3.jpg" alt="Limhamnsporten - Verksamhetslokaler">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Limhamnsporten</h3>
+              <div class="card-meta">
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Limhamn
+                </span>
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  15 000 kvm
+                </span>
+              </div>
+              <p class="card-description">Flexibla verksamhetslokaler med goda parkeringsmöjligheter och närhet till motorväg.</p>
+              <button class="btn btn-primary" style="width:100%" onclick="openPropertyModal('limhamnsporten')">Läs mer</button>
+            </div>
+          </article>
+          
+          <article class="card" data-area="hyllie" data-type="kontor">
+            <div class="card-image">
+              <img src="images/property-4.jpg" alt="Hyllie Park - Nybyggt kontorshus">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Hyllie Park</h3>
+              <div class="card-meta">
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Hyllie
+                </span>
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  9 500 kvm
+                </span>
+              </div>
+              <p class="card-description">Nybyggda, miljöcertifierade kontorslokaler vid Hyllie station med direkttåg till Köpenhamn.</p>
+              <button class="btn btn-primary" style="width:100%" onclick="openPropertyModal('hylliepark')">Läs mer</button>
+            </div>
+          </article>
+          
+          <article class="card" data-area="centrum" data-type="kontor">
+            <div class="card-image">
+              <img src="images/office-interior-1.jpg" alt="Stortorget 5 - Historisk kontorsfastighet">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Stortorget 5</h3>
+              <div class="card-meta">
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Malmö Centrum
+                </span>
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  4 200 kvm
+                </span>
+              </div>
+              <p class="card-description">Historisk fastighet med modern standard och unik karaktär mitt på Stortorget.</p>
+              <button class="btn btn-primary" style="width:100%" onclick="openPropertyModal('stortorget')">Läs mer</button>
+            </div>
+          </article>
+          
+          <article class="card" data-area="vastra-hamnen" data-type="kontor">
+            <div class="card-image">
+              <img src="images/office-interior-2.jpg" alt="Dockan - Modernt kontorshus">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Dockan</h3>
+              <div class="card-meta">
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Västra Hamnen
+                </span>
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  7 800 kvm
+                </span>
+              </div>
+              <p class="card-description">State-of-the-art kontorsfastighet med fokus på hållbarhet och medarbetarnas välbefinnande.</p>
+              <button class="btn btn-primary" style="width:100%" onclick="openPropertyModal('dockan')">Läs mer</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band">
+      <div class="cta-band-bg">
+        <img src="images/cta-background.jpg" alt="Moderna kontorslokaler">
+      </div>
+      <div class="cta-band-overlay"></div>
+      <div class="cta-band-content container">
+        <h2>Intresserad av våra lokaler?</h2>
+        <p>Kontakta oss för mer information eller boka en visning.</p>
+        <a href="lediga-lokaler.html" class="btn btn-primary">Se lediga lokaler</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Property Detail Modal -->
+  <div class="modal-overlay" id="propertyModal">
+    <div class="modal" style="max-width:800px;">
+      <div class="modal-header">
+        <h3 id="propertyModalTitle">Fastighet</h3>
+        <button class="modal-close" onclick="closePropertyModal()" aria-label="Stäng">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="gallery mb-4" id="propertyGallery">
+          <div class="gallery-item"><img src="images/property-1.jpg" alt="Fastighetsbild 1"></div>
+          <div class="gallery-item"><img src="images/property-2.jpg" alt="Fastighetsbild 2"></div>
+          <div class="gallery-item"><img src="images/property-3.jpg" alt="Fastighetsbild 3"></div>
+        </div>
+        <div id="propertyDetails">
+          <p>Detaljerad information om fastigheten kommer här.</p>
+        </div>
+        <div class="mt-4" style="display:flex;gap:0.5rem;">
+          <a href="lediga-lokaler.html" class="btn btn-primary">Se lediga lokaler i fastigheten</a>
+          <button class="btn btn-secondary" onclick="closePropertyModal()">Stäng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Kontakt</h4>
+          <p>Testföretag AB<br>Storgatan 1<br>211 34 Malmö</p>
+          <p class="mt-4">
+            <a href="tel:+4640123456">040-12 34 56</a><br>
+            <a href="mailto:info@testforetag.se">info@testforetag.se</a>
+          </p>
+        </div>
+        <div>
+          <h4>Snabblänkar</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="om-oss.html">Om oss</a></li>
+            <li><a href="fastigheter.html">Fastigheter</a></li>
+            <li><a href="projektutveckling.html">Projektutveckling</a></li>
+            <li><a href="lediga-lokaler.html">Lediga lokaler</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Nyhetsbrev</h4>
+          <p>Prenumerera på vårt nyhetsbrev.</p>
+          <form class="footer-newsletter mt-4" onsubmit="event.preventDefault(); alert('Tack för din anmälan!');">
+            <input type="email" placeholder="Din e-postadress" required>
+            <button type="submit">Prenumerera</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Testföretag AB. Alla rättigheter förbehållna.</p>
+        <div class="footer-legal">
+          <a href="#">Cookies</a>
+          <a href="#">Integritetspolicy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="container cookie-banner-inner">
+      <p>Vi använder cookies för att förbättra din upplevelse på vår webbplats.</p>
+      <div class="cookie-buttons">
+        <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Acceptera</button>
+        <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Avvisa</button>
+        <button class="cookie-btn cookie-btn-settings" onclick="openCookieSettings()">Inställningar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="cookieModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Cookie-inställningar</h3>
+        <button class="modal-close" onclick="closeCookieSettings()" aria-label="Stäng">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-4">Välj vilka typer av cookies du vill tillåta:</p>
+        <div class="mb-4">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" checked disabled>
+            <strong>Nödvändiga cookies</strong>
+          </label>
+        </div>
+        <div class="mb-4">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" id="analyticsCookies">
+            <strong>Analys-cookies</strong>
+          </label>
+        </div>
+        <div class="mb-8">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" id="marketingCookies">
+            <strong>Marknadsföringscookies</strong>
+          </label>
+        </div>
+        <div style="display:flex;gap:0.5rem;justify-content:flex-end;">
+          <button class="btn btn-secondary" onclick="closeCookieSettings()">Avbryt</button>
+          <button class="btn btn-primary" onclick="saveCookieSettings()">Spara</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('open');
+      document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    function acceptCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      localStorage.setItem('cookieConsent', 'accepted');
+    }
+
+    function rejectCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      localStorage.setItem('cookieConsent', 'rejected');
+    }
+
+    function openCookieSettings() {
+      document.getElementById('cookieModal').classList.add('open');
+    }
+
+    function closeCookieSettings() {
+      document.getElementById('cookieModal').classList.remove('open');
+    }
+
+    function saveCookieSettings() {
+      closeCookieSettings();
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+
+    if (localStorage.getItem('cookieConsent')) {
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+
+    // Filter functionality
+    function filterProperties() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const area = document.getElementById('areaFilter').value;
+      const type = document.getElementById('typeFilter').value;
+      const cards = document.querySelectorAll('#propertiesGrid .card');
+      
+      cards.forEach(card => {
+        const cardArea = card.dataset.area;
+        const cardType = card.dataset.type;
+        const cardText = card.textContent.toLowerCase();
+        
+        const matchesSearch = cardText.includes(search);
+        const matchesArea = !area || cardArea === area;
+        const matchesType = !type || cardType === type;
+        
+        card.style.display = matchesSearch && matchesArea && matchesType ? '' : 'none';
+      });
+    }
+
+    function setAreaFilter(area) {
+      document.getElementById('areaFilter').value = area;
+      document.querySelectorAll('.filter-chip').forEach(chip => chip.classList.remove('active'));
+      event.target.classList.add('active');
+      filterProperties();
+    }
+
+    // Property Modal
+    function openPropertyModal(propertyId) {
+      document.getElementById('propertyModal').classList.add('open');
+    }
+
+    function closePropertyModal() {
+      document.getElementById('propertyModal').classList.remove('open');
+    }
+  </script>
+</body>
+</html>

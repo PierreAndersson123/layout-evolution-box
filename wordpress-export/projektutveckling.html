@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projektutveckling - Testföretag</title>
+  <meta name="description" content="Testföretag utvecklar hållbara fastigheter i Malmöregionen. Läs om vår process, pågående projekt och vision för framtidens arbetsplatser.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Testföretag</a>
+      
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Hem</a>
+        <a href="om-oss.html" class="nav-link">Om oss</a>
+        <a href="fastigheter.html" class="nav-link">Fastigheter</a>
+        <a href="projektutveckling.html" class="nav-link active">Projektutveckling</a>
+        <a href="lediga-lokaler.html" class="nav-link">Lediga lokaler</a>
+      </nav>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Öppna meny">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header">
+        <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Stäng meny">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link">Hem</a>
+        <a href="om-oss.html" class="mobile-nav-link">Om oss</a>
+        <a href="fastigheter.html" class="mobile-nav-link">Fastigheter</a>
+        <a href="projektutveckling.html" class="mobile-nav-link active">Projektutveckling</a>
+        <a href="lediga-lokaler.html" class="mobile-nav-link">Lediga lokaler</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="images/project-hero.jpg" alt="Projektutveckling hos Testföretag">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Projektutveckling</h1>
+        <p>Vi utvecklar hållbara fastigheter som skapar värde för hyresgäster, samhälle och miljö.</p>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Vi bygger för framtiden</h2>
+          <p>Med gedigen erfarenhet och passion för kvalitet driver vi utvecklingsprojekt som sätter nya standarder.</p>
+        </div>
+        
+        <div class="grid-2">
+          <div>
+            <p>Sedan grundandet har vi genomfört ett flertal framgångsrika utvecklingsprojekt i Malmöregionen. Varje projekt drivs med samma engagemang och kvalitetsfokus som präglat oss i snart 40 år.</p>
+            <p>Vår styrka ligger i att kombinera långsiktig planering med flexibilitet. Vi lyssnar på framtida hyresgäster tidigt i processen och anpassar våra projekt efter verkliga behov – inte bara ritningar och kalkyler.</p>
+          </div>
+          <div>
+            <p>Hållbarhet är inte ett modeord för oss, utan en grundförutsättning. Alla våra nya projekt utformas för att minimera miljöpåverkan under såväl byggnation som drift. Vi väljer material med omsorg och arbetar aktivt med energioptimering och gröna certifieringar.</p>
+            <p>Resultatet är fastigheter som står sig över tid – ekonomiskt, miljömässigt och estetiskt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Steps -->
+    <section class="section-padding bg-secondary">
+      <div class="container">
+        <div class="section-header">
+          <h2>Vår process</h2>
+          <p>Från idé till inflyttning – så arbetar vi med projektutveckling.</p>
+        </div>
+        
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="process-step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </div>
+            <h3>Analys & Planering</h3>
+            <p>Vi identifierar möjligheter, analyserar marknaden och tar fram detaljerade planer. Dialog med framtida hyresgäster påbörjas redan här.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="process-step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3>Design & Projektering</h3>
+            <p>Tillsammans med arkitekter och ingenjörer skapar vi lösningar som kombinerar funktion, estetik och hållbarhet.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="process-step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+            </div>
+            <h3>Byggnation & Leverans</h3>
+            <p>Noggrann uppföljning säkerställer kvalitet i varje steg. Vi levererar i tid och enligt överenskommelse.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Highlight -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="intro-section">
+          <div>
+            <div class="section-header left">
+              <h2>Senaste projektet: Hyllie Park</h2>
+              <p>Miljöcertifierat kontorshus med fokus på välbefinnande och flexibilitet.</p>
+            </div>
+            <p>Hyllie Park är vårt senaste färdigställda projekt – ett modernt kontorshus på 9 500 kvm i det expansiva Hyllieområdet. Byggnaden certifierades enligt Miljöbyggnad Guld och har redan välkomnats av flera nöjda hyresgäster.</p>
+            <p>Fastigheten erbjuder flexibla kontorslösningar från 200 till 2 000 kvm, gemensamma mötesrum och en takterrass med utsikt över Öresund. Direkt anslutning till Hyllie station ger snabb förbindelse till Malmö C, Köpenhamn och Kastrup.</p>
+            <a href="fastigheter.html" class="btn btn-primary">Se fler fastigheter</a>
+          </div>
+          <div class="intro-image">
+            <img src="images/cta-background.jpg" alt="Hyllie Park kontorshus">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section-padding bg-secondary">
+      <div class="container">
+        <div class="section-header">
+          <h2>Genomförda projekt</h2>
+          <p>Ett urval av våra tidigare utvecklingsprojekt.</p>
+        </div>
+        
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="images/property-1.jpg" alt="Projekt 1 - Kontorsfastighet">
+          </div>
+          <div class="gallery-item">
+            <img src="images/property-2.jpg" alt="Projekt 2 - Verksamhetslokaler">
+          </div>
+          <div class="gallery-item">
+            <img src="images/hero-facade.jpg" alt="Projekt 3 - Modern arkitektur">
+          </div>
+          <div class="gallery-item">
+            <img src="images/property-3.jpg" alt="Projekt 4 - Kontorsinteriör">
+          </div>
+          <div class="gallery-item">
+            <img src="images/property-4.jpg" alt="Projekt 5 - Nybyggnation">
+          </div>
+          <div class="gallery-item">
+            <img src="images/office-interior-1.jpg" alt="Projekt 6 - Kontorslandskap">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band">
+      <div class="cta-band-bg">
+        <img src="images/cta-background.jpg" alt="Kontorsmiljö">
+      </div>
+      <div class="cta-band-overlay"></div>
+      <div class="cta-band-content container">
+        <h2>Har du ett projektförslag?</h2>
+        <p>Vi är alltid intresserade av nya möjligheter och samarbeten. Kontakta oss!</p>
+        <a href="mailto:info@testforetag.se" class="btn btn-primary">Kontakta oss</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Kontakt</h4>
+          <p>Testföretag AB<br>Storgatan 1<br>211 34 Malmö</p>
+          <p class="mt-4">
+            <a href="tel:+4640123456">040-12 34 56</a><br>
+            <a href="mailto:info@testforetag.se">info@testforetag.se</a>
+          </p>
+        </div>
+        <div>
+          <h4>Snabblänkar</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="om-oss.html">Om oss</a></li>
+            <li><a href="fastigheter.html">Fastigheter</a></li>
+            <li><a href="projektutveckling.html">Projektutveckling</a></li>
+            <li><a href="lediga-lokaler.html">Lediga lokaler</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Nyhetsbrev</h4>
+          <p>Prenumerera på vårt nyhetsbrev.</p>
+          <form class="footer-newsletter mt-4" onsubmit="event.preventDefault(); alert('Tack för din anmälan!');">
+            <input type="email" placeholder="Din e-postadress" required>
+            <button type="submit">Prenumerera</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Testföretag AB. Alla rättigheter förbehållna.</p>
+        <div class="footer-legal">
+          <a href="#">Cookies</a>
+          <a href="#">Integritetspolicy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="container cookie-banner-inner">
+      <p>Vi använder cookies för att förbättra din upplevelse på vår webbplats.</p>
+      <div class="cookie-buttons">
+        <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Acceptera</button>
+        <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Avvisa</button>
+        <button class="cookie-btn cookie-btn-settings" onclick="openCookieSettings()">Inställningar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="cookieModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Cookie-inställningar</h3>
+        <button class="modal-close" onclick="closeCookieSettings()" aria-label="Stäng">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-4">Välj vilka typer av cookies du vill tillåta:</p>
+        <div class="mb-4">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" checked disabled>
+            <strong>Nödvändiga cookies</strong>
+          </label>
+        </div>
+        <div class="mb-4">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" id="analyticsCookies">
+            <strong>Analys-cookies</strong>
+          </label>
+        </div>
+        <div class="mb-8">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" id="marketingCookies">
+            <strong>Marknadsföringscookies</strong>
+          </label>
+        </div>
+        <div style="display:flex;gap:0.5rem;justify-content:flex-end;">
+          <button class="btn btn-secondary" onclick="closeCookieSettings()">Avbryt</button>
+          <button class="btn btn-primary" onclick="saveCookieSettings()">Spara</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('open');
+      document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    function acceptCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      localStorage.setItem('cookieConsent', 'accepted');
+    }
+
+    function rejectCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      localStorage.setItem('cookieConsent', 'rejected');
+    }
+
+    function openCookieSettings() {
+      document.getElementById('cookieModal').classList.add('open');
+    }
+
+    function closeCookieSettings() {
+      document.getElementById('cookieModal').classList.remove('open');
+    }
+
+    function saveCookieSettings() {
+      closeCookieSettings();
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+
+    if (localStorage.getItem('cookieConsent')) {
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

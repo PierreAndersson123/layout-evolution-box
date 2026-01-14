@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testföretag - Fastighetsägare i Malmö</title>
+  <meta name="description" content="Testföretag är en långsiktig fastighetsägare i Malmöregionen. Vi erbjuder moderna kontorslokaler och utvecklar hållbara fastigheter sedan 1985.">
+  <meta name="author" content="Testföretag">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://testforetag.se">
+  
+  <meta property="og:title" content="Testföretag - Fastighetsägare i Malmö">
+  <meta property="og:description" content="Långsiktigt fastighetsägande och utveckling i Malmöregionen sedan 1985.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Testföretag - Fastighetsägare i Malmö">
+  <meta name="twitter:description" content="Långsiktigt fastighetsägande och utveckling i Malmöregionen sedan 1985.">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Testföretag</a>
+      
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link active">Hem</a>
+        <a href="om-oss.html" class="nav-link">Om oss</a>
+        <a href="fastigheter.html" class="nav-link">Fastigheter</a>
+        <a href="projektutveckling.html" class="nav-link">Projektutveckling</a>
+        <a href="lediga-lokaler.html" class="nav-link">Lediga lokaler</a>
+      </nav>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Öppna meny">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header">
+        <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Stäng meny">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link active">Hem</a>
+        <a href="om-oss.html" class="mobile-nav-link">Om oss</a>
+        <a href="fastigheter.html" class="mobile-nav-link">Fastigheter</a>
+        <a href="projektutveckling.html" class="mobile-nav-link">Projektutveckling</a>
+        <a href="lediga-lokaler.html" class="mobile-nav-link">Lediga lokaler</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="images/hero-facade.jpg" alt="Modern kontorsfasad i Malmö">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Testföretag</h1>
+        <p>Långsiktigt fastighetsägande och utveckling i Malmöregionen sedan 1985. Vi skapar moderna arbetsplatser för framtidens företag.</p>
+        <div class="hero-buttons">
+          <a href="lediga-lokaler.html" class="btn btn-primary">Se lediga lokaler</a>
+          <a href="om-oss.html" class="btn btn-outline">Läs mer om oss</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="intro-section">
+          <div>
+            <div class="section-header left">
+              <h2>Långsiktigt fastighetsägande i Malmö</h2>
+              <p>Vi är en familjeägd fastighetsförvaltare med rötterna i Malmö.</p>
+            </div>
+            <p>Sedan starten 1985 har vi arbetat med ett enda mål: att skapa och förvalta fastigheter av högsta kvalitet. Vår filosofi bygger på långsiktighet, hållbarhet och nära relationer med våra hyresgäster.</p>
+            <p>Idag förvaltar vi över 50 000 kvadratmeter kontors- och verksamhetslokaler i Malmöregionen. Vi är stolta över att kunna erbjuda moderna, flexibla arbetsmiljöer som möter dagens och morgondagens behov.</p>
+            <a href="om-oss.html" class="btn btn-secondary">Läs mer om oss</a>
+          </div>
+          <div class="intro-image">
+            <img src="images/office-interior-1.jpg" alt="Modern kontorsinteriör med skandinavisk design">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="section-padding bg-secondary">
+      <div class="container">
+        <div class="section-header">
+          <h2>Utvalda fastigheter</h2>
+          <p>Upptäck vårt fastighetsbestånd i Malmöregionen.</p>
+        </div>
+        
+        <div class="grid-4">
+          <article class="card">
+            <div class="card-image">
+              <img src="images/property-1.jpg" alt="Kontorsfastighet i Malmö centrum">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Centrumhuset</h3>
+              <div class="card-meta">
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Malmö Centrum
+                </span>
+              </div>
+              <p class="card-description">Modern kontorsfastighet i hjärtat av Malmö med utmärkta kommunikationer.</p>
+              <a href="fastigheter.html" class="btn btn-primary" style="width:100%">Läs mer</a>
+            </div>
+          </article>
+          
+          <article class="card">
+            <div class="card-image">
+              <img src="images/property-2.jpg" alt="Kontorshus vid Västra Hamnen">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Hamnkontoret</h3>
+              <div class="card-meta">
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Västra Hamnen
+                </span>
+              </div>
+              <p class="card-description">Exklusiva kontorslokaler med havsutsikt i Västra Hamnens mest attraktiva läge.</p>
+              <a href="fastigheter.html" class="btn btn-primary" style="width:100%">Läs mer</a>
+            </div>
+          </article>
+          
+          <article class="card">
+            <div class="card-image">
+              <img src="images/property-3.jpg" alt="Verksamhetslokaler i Limhamn">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Limhamnsporten</h3>
+              <div class="card-meta">
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Limhamn
+                </span>
+              </div>
+              <p class="card-description">Flexibla verksamhetslokaler med goda parkeringsmöjligheter och närhet till motorväg.</p>
+              <a href="fastigheter.html" class="btn btn-primary" style="width:100%">Läs mer</a>
+            </div>
+          </article>
+          
+          <article class="card">
+            <div class="card-image">
+              <img src="images/property-4.jpg" alt="Nybyggt kontorshus i Hyllie">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Hyllie Park</h3>
+              <div class="card-meta">
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Hyllie
+                </span>
+              </div>
+              <p class="card-description">Nybyggda, miljöcertifierade kontorslokaler vid Hyllie station med direkttåg till Köpenhamn.</p>
+              <a href="fastigheter.html" class="btn btn-primary" style="width:100%">Läs mer</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Highlight -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="intro-section">
+          <div class="intro-image">
+            <img src="images/project-hero.jpg" alt="Projektutveckling - modern arkitektur">
+          </div>
+          <div>
+            <div class="section-header left">
+              <h2>Projektutveckling</h2>
+              <p>Vi utvecklar morgondagens fastigheter.</p>
+            </div>
+            <p>Med gedigen erfarenhet och passion för kvalitet driver vi utvecklingsprojekt som skapar värde för både hyresgäster och samhälle. Från idé till färdig fastighet – vi har kompetensen och engagemanget.</p>
+            <p>Vårt fokus ligger på hållbar utveckling med moderna energilösningar, smarta materialval och flexibla planlösningar som står sig över tid.</p>
+            <a href="projektutveckling.html" class="btn btn-primary">Läs om projektutveckling</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band">
+      <div class="cta-band-bg">
+        <img src="images/cta-background.jpg" alt="Moderna kontorslokaler">
+      </div>
+      <div class="cta-band-overlay"></div>
+      <div class="cta-band-content container">
+        <h2>Letar du efter lokal?</h2>
+        <p>Vi har lediga lokaler i flera storlekar och lägen. Kontakta oss för en visning!</p>
+        <a href="lediga-lokaler.html" class="btn btn-primary">Se lediga lokaler</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Kontakt</h4>
+          <p>Testföretag AB<br>Storgatan 1<br>211 34 Malmö</p>
+          <p class="mt-4">
+            <a href="tel:+4640123456">040-12 34 56</a><br>
+            <a href="mailto:info@testforetag.se">info@testforetag.se</a>
+          </p>
+        </div>
+        <div>
+          <h4>Snabblänkar</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="om-oss.html">Om oss</a></li>
+            <li><a href="fastigheter.html">Fastigheter</a></li>
+            <li><a href="projektutveckling.html">Projektutveckling</a></li>
+            <li><a href="lediga-lokaler.html">Lediga lokaler</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Nyhetsbrev</h4>
+          <p>Prenumerera på vårt nyhetsbrev för att få de senaste nyheterna och erbjudandena.</p>
+          <form class="footer-newsletter mt-4" onsubmit="event.preventDefault(); alert('Tack för din anmälan!');">
+            <input type="email" placeholder="Din e-postadress" required>
+            <button type="submit">Prenumerera</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Testföretag AB. Alla rättigheter förbehållna.</p>
+        <div class="footer-legal">
+          <a href="#">Cookies</a>
+          <a href="#">Integritetspolicy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="container cookie-banner-inner">
+      <p>Vi använder cookies för att förbättra din upplevelse på vår webbplats. Genom att fortsätta godkänner du vår användning av cookies.</p>
+      <div class="cookie-buttons">
+        <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Acceptera</button>
+        <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Avvisa</button>
+        <button class="cookie-btn cookie-btn-settings" onclick="openCookieSettings()">Inställningar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Settings Modal -->
+  <div class="modal-overlay" id="cookieModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Cookie-inställningar</h3>
+        <button class="modal-close" onclick="closeCookieSettings()" aria-label="Stäng">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-4">Välj vilka typer av cookies du vill tillåta:</p>
+        
+        <div class="mb-4">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" checked disabled>
+            <strong>Nödvändiga cookies</strong>
+          </label>
+          <p class="text-sm text-muted mt-1">Dessa cookies är nödvändiga för att webbplatsen ska fungera korrekt.</p>
+        </div>
+        
+        <div class="mb-4">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" id="analyticsCookies">
+            <strong>Analys-cookies</strong>
+          </label>
+          <p class="text-sm text-muted mt-1">Hjälper oss förstå hur besökare använder webbplatsen.</p>
+        </div>
+        
+        <div class="mb-8">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" id="marketingCookies">
+            <strong>Marknadsföringscookies</strong>
+          </label>
+          <p class="text-sm text-muted mt-1">Används för att visa relevanta annonser.</p>
+        </div>
+        
+        <div style="display:flex;gap:0.5rem;justify-content:flex-end;">
+          <button class="btn btn-secondary" onclick="closeCookieSettings()">Avbryt</button>
+          <button class="btn btn-primary" onclick="saveCookieSettings()">Spara inställningar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('open');
+      document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    // Cookie Consent
+    function acceptCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      localStorage.setItem('cookieConsent', 'accepted');
+    }
+
+    function rejectCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      localStorage.setItem('cookieConsent', 'rejected');
+    }
+
+    function openCookieSettings() {
+      document.getElementById('cookieModal').classList.add('open');
+    }
+
+    function closeCookieSettings() {
+      document.getElementById('cookieModal').classList.remove('open');
+    }
+
+    function saveCookieSettings() {
+      const analytics = document.getElementById('analyticsCookies').checked;
+      const marketing = document.getElementById('marketingCookies').checked;
+      localStorage.setItem('cookieConsent', JSON.stringify({ analytics, marketing }));
+      closeCookieSettings();
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+
+    // Check if cookies already accepted
+    if (localStorage.getItem('cookieConsent')) {
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
