@@ -1,0 +1,225 @@
+/**
+ * Custom styles for Testföretag Theme
+ * Add any additional custom styles here
+ */
+
+/* Modal image */
+.modal-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cookie option styling */
+.cookie-option {
+    padding: 1rem 0;
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+.cookie-option:last-child {
+    border-bottom: none;
+}
+
+.cookie-option label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.cookie-option input[type="checkbox"] {
+    margin-top: 0.25rem;
+    width: 18px;
+    height: 18px;
+    accent-color: hsl(var(--primary));
+}
+
+/* Entry content styling for pages */
+.entry-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.entry-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.entry-content ul,
+.entry-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.entry-content li {
+    margin-bottom: 0.5rem;
+}
+
+.entry-content blockquote {
+    border-left: 4px solid hsl(var(--primary));
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: hsl(var(--muted-foreground));
+}
+
+.entry-content img {
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+}
+
+.entry-content a {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+}
+
+.entry-content a:hover {
+    text-decoration: none;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+}
+
+.breadcrumbs a {
+    color: hsl(var(--muted-foreground));
+    transition: color 0.2s ease;
+}
+
+.breadcrumbs a:hover {
+    color: hsl(var(--primary));
+}
+
+.breadcrumbs .separator {
+    margin: 0 0.5rem;
+}
+
+.breadcrumbs .current {
+    color: hsl(var(--foreground));
+}
+
+/* Social links in footer */
+.social-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Form styling for Contact Form 7 compatibility */
+.wpcf7-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.wpcf7-form label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form textarea,
+.wpcf7-form select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    font-size: 1rem;
+}
+
+.wpcf7-form input:focus,
+.wpcf7-form textarea:focus,
+.wpcf7-form select:focus {
+    outline: none;
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+}
+
+.wpcf7-form .wpcf7-submit {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.wpcf7-form .wpcf7-submit:hover {
+    background: hsl(224 58% 28%);
+}
+
+/* Widget styling */
+.widget {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: hsl(var(--secondary));
+    border-radius: var(--radius);
+}
+
+.widget-title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid hsl(var(--primary));
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+.widget li:last-child {
+    border-bottom: none;
+}
+
+.widget a {
+    color: hsl(var(--foreground));
+    transition: color 0.2s ease;
+}
+
+.widget a:hover {
+    color: hsl(var(--primary));
+}
+
+/* Page links (pagination within posts) */
+.page-links {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid hsl(var(--border));
+}
+
+/* Admin bar fix for sticky header */
+.admin-bar .site-header {
+    top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    .admin-bar .site-header {
+        top: 46px;
+    }
+}
