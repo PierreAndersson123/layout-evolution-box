@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om oss - Testföretag</title>
+  <meta name="description" content="Lär känna Testföretag - en familjeägd fastighetsförvaltare i Malmö sedan 1985. Läs om vår historia, filosofi och arbetssätt.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Testföretag</a>
+      
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Hem</a>
+        <a href="om-oss.html" class="nav-link active">Om oss</a>
+        <a href="fastigheter.html" class="nav-link">Fastigheter</a>
+        <a href="projektutveckling.html" class="nav-link">Projektutveckling</a>
+        <a href="lediga-lokaler.html" class="nav-link">Lediga lokaler</a>
+      </nav>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Öppna meny">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header">
+        <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Stäng meny">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link">Hem</a>
+        <a href="om-oss.html" class="mobile-nav-link active">Om oss</a>
+        <a href="fastigheter.html" class="mobile-nav-link">Fastigheter</a>
+        <a href="projektutveckling.html" class="mobile-nav-link">Projektutveckling</a>
+        <a href="lediga-lokaler.html" class="mobile-nav-link">Lediga lokaler</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="images/about-hero.jpg" alt="Testföretag team och kontor">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Om oss</h1>
+        <p>En familjeägd fastighetsförvaltare med passion för kvalitet och långsiktighet.</p>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Vår filosofi</h2>
+          <p>Långsiktighet, kvalitet och nära relationer är grundpelarna i allt vi gör.</p>
+        </div>
+        
+        <div class="grid-2">
+          <div>
+            <h3>Vision</h3>
+            <p>Att vara den mest uppskattade fastighetsägaren i Malmöregionen – känd för vårt engagemang, vår kvalitet och våra långsiktiga relationer med hyresgäster och samhälle.</p>
+            <p>Vi tror på att bygga värden som varar över generationer, inte bara kvartalsrapporter. Varje beslut vi fattar grundar sig i frågan: Är detta bra för våra hyresgäster, våra fastigheter och vårt samhälle på lång sikt?</p>
+          </div>
+          <div>
+            <h3>Värderingar</h3>
+            <ul class="values-list">
+              <li><strong>Långsiktighet</strong> – Vi tänker i decennier, inte kvartal</li>
+              <li><strong>Kvalitet</strong> – Allt vi gör ska hålla högsta standard</li>
+              <li><strong>Relationer</strong> – Nära samarbete med hyresgäster och partners</li>
+              <li><strong>Hållbarhet</strong> – Ansvar för miljö och samhälle</li>
+              <li><strong>Innovation</strong> – Ständig utveckling av våra fastigheter och tjänster</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section-padding bg-secondary">
+      <div class="container">
+        <div class="section-header">
+          <h2>Vår historia</h2>
+          <p>Från liten familjeverksamhet till etablerad fastighetsägare.</p>
+        </div>
+        
+        <div style="max-width:700px;margin:0 auto;">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-year">1985</span>
+              <h4 class="timeline-title">Grundandet</h4>
+              <p class="timeline-description">Testföretag grundas av familjen Testsson med förvärvet av den första kontorsfastigheten i centrala Malmö.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">1992</span>
+              <h4 class="timeline-title">Expansion</h4>
+              <p class="timeline-description">Fastighetsbeståndet växer till fem fastigheter. Företaget etablerar sig som en pålitlig hyresvärd i regionen.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2005</span>
+              <h4 class="timeline-title">Generationsskifte</h4>
+              <p class="timeline-description">Andra generationen tar över ledningen. Fokus läggs på modernisering och hållbarhet.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2015</span>
+              <h4 class="timeline-title">Hållbarhetscertifiering</h4>
+              <p class="timeline-description">Samtliga fastigheter miljöcertifieras. Vi blir en av de första fastighetsägarna i regionen med 100% förnybar energi.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2024</span>
+              <h4 class="timeline-title">Idag</h4>
+              <p class="timeline-description">Vi förvaltar över 50 000 kvm och fortsätter utveckla hållbara, moderna arbetsplatser för framtidens företag.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Methods Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="intro-section">
+          <div>
+            <div class="section-header left">
+              <h2>Vårt arbetssätt</h2>
+              <p>Så arbetar vi för att skapa de bästa förutsättningarna för våra hyresgäster.</p>
+            </div>
+            <p>Vi tror på personliga relationer och snabb service. Varje hyresgäst har en dedikerad kontaktperson som känner till just deras verksamhet och behov.</p>
+            <h4>Det här kan du förvänta dig:</h4>
+            <ul class="values-list">
+              <li>Personlig kontakt och snabb respons på alla ärenden</li>
+              <li>Regelbundna fastighetsmöten och dialoger</li>
+              <li>Proaktivt underhåll och ständiga förbättringar</li>
+              <li>Flexibilitet vid förändrade lokalbehov</li>
+              <li>Transparens kring kostnader och planerade åtgärder</li>
+            </ul>
+          </div>
+          <div class="intro-image">
+            <img src="images/office-interior-2.jpg" alt="Modernt kontorslandskap">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band">
+      <div class="cta-band-bg">
+        <img src="images/cta-background.jpg" alt="Moderna kontorslokaler">
+      </div>
+      <div class="cta-band-overlay"></div>
+      <div class="cta-band-content container">
+        <h2>Vill du veta mer?</h2>
+        <p>Kontakta oss för att diskutera hur vi kan hjälpa dig hitta rätt lokal.</p>
+        <a href="lediga-lokaler.html" class="btn btn-primary">Se lediga lokaler</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Kontakt</h4>
+          <p>Testföretag AB<br>Storgatan 1<br>211 34 Malmö</p>
+          <p class="mt-4">
+            <a href="tel:+4640123456">040-12 34 56</a><br>
+            <a href="mailto:info@testforetag.se">info@testforetag.se</a>
+          </p>
+        </div>
+        <div>
+          <h4>Snabblänkar</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="om-oss.html">Om oss</a></li>
+            <li><a href="fastigheter.html">Fastigheter</a></li>
+            <li><a href="projektutveckling.html">Projektutveckling</a></li>
+            <li><a href="lediga-lokaler.html">Lediga lokaler</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Nyhetsbrev</h4>
+          <p>Prenumerera på vårt nyhetsbrev för att få de senaste nyheterna och erbjudandena.</p>
+          <form class="footer-newsletter mt-4" onsubmit="event.preventDefault(); alert('Tack för din anmälan!');">
+            <input type="email" placeholder="Din e-postadress" required>
+            <button type="submit">Prenumerera</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Testföretag AB. Alla rättigheter förbehållna.</p>
+        <div class="footer-legal">
+          <a href="#">Cookies</a>
+          <a href="#">Integritetspolicy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="container cookie-banner-inner">
+      <p>Vi använder cookies för att förbättra din upplevelse på vår webbplats.</p>
+      <div class="cookie-buttons">
+        <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Acceptera</button>
+        <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Avvisa</button>
+        <button class="cookie-btn cookie-btn-settings" onclick="openCookieSettings()">Inställningar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Settings Modal -->
+  <div class="modal-overlay" id="cookieModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Cookie-inställningar</h3>
+        <button class="modal-close" onclick="closeCookieSettings()" aria-label="Stäng">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-4">Välj vilka typer av cookies du vill tillåta:</p>
+        <div class="mb-4">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" checked disabled>
+            <strong>Nödvändiga cookies</strong>
+          </label>
+          <p class="text-sm text-muted mt-1">Dessa cookies är nödvändiga för att webbplatsen ska fungera korrekt.</p>
+        </div>
+        <div class="mb-4">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" id="analyticsCookies">
+            <strong>Analys-cookies</strong>
+          </label>
+          <p class="text-sm text-muted mt-1">Hjälper oss förstå hur besökare använder webbplatsen.</p>
+        </div>
+        <div class="mb-8">
+          <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+            <input type="checkbox" id="marketingCookies">
+            <strong>Marknadsföringscookies</strong>
+          </label>
+          <p class="text-sm text-muted mt-1">Används för att visa relevanta annonser.</p>
+        </div>
+        <div style="display:flex;gap:0.5rem;justify-content:flex-end;">
+          <button class="btn btn-secondary" onclick="closeCookieSettings()">Avbryt</button>
+          <button class="btn btn-primary" onclick="saveCookieSettings()">Spara inställningar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('open');
+      document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    function acceptCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      localStorage.setItem('cookieConsent', 'accepted');
+    }
+
+    function rejectCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      localStorage.setItem('cookieConsent', 'rejected');
+    }
+
+    function openCookieSettings() {
+      document.getElementById('cookieModal').classList.add('open');
+    }
+
+    function closeCookieSettings() {
+      document.getElementById('cookieModal').classList.remove('open');
+    }
+
+    function saveCookieSettings() {
+      const analytics = document.getElementById('analyticsCookies').checked;
+      const marketing = document.getElementById('marketingCookies').checked;
+      localStorage.setItem('cookieConsent', JSON.stringify({ analytics, marketing }));
+      closeCookieSettings();
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+
+    if (localStorage.getItem('cookieConsent')) {
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
